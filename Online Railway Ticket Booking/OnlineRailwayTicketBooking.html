@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Railway Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+   
+   
+</head>
+<body>
+    <header>
+        <h1>Online Railway Ticket Booking</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Booking</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </nav>
+    <div class="container">
+        <form id="bookingForm" method="POST" action="process_booking.php">
+            <label for="trainNumber">Train Number:</label>
+            <input type="text" id="trainNumber" name="trainNumber" required>
+
+            <label for="passengerName">Passenger Name:</label>
+            <input type="text" id="passengerName" name="passengerName" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="fromCity">From City:</label>
+            <input type="text" id="fromCity" name="fromCity" required>
+
+            <label for="toCity">To City:</label>
+            <input type="text" id="toCity" name="toCity" required>
+
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="">Select</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="SL">Sleeper</option>
+            </select>
+
+            <label for="journeyDate">Journey Date:</label>
+            <input type="date" id="journeyDate" name="journeyDate" required>
+
+            <button type="submit" onclick="bookTicket(event)">Book Ticket</button>
+        </form>
+        <script src="script.js"></script>
+    </div>
+    <footer>
+        <!-- Date and time will be dynamically displayed here -->
+        &copy; 2025 Event Management System &reg; All Rights Reserved.
+        Devloper By Harsh Rakholiya
+    </footer>
+</body>
+</html>

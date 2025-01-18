@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="style.css">
+
+ 
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Site Logo">
+        <h1>User Registration System</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Register</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </nav>
+    <div class="container">
+        <form id="registrationForm" method="POST" action="process_user_registration.php" enctype="multipart/form-data">
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="photograph">Photograph:</label>
+            <input type="file" id="photograph" name="photograph" accept="image/*" required>
+
+            <button type="submit" onclick="registerUser(event)">Register</button>
+        </form>
+       <script src="script.js"></script>
+    </div>
+    <footer>
+        <!-- Current time will be dynamically displayed here -->
+    </footer>
+</body>
+</html>
